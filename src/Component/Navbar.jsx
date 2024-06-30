@@ -21,29 +21,36 @@ function Navbar() {
             title: "Blog",
             path: "/blog"
         },
+        {
+            title: "Categories",
+            path: "/categories"
+        },
+        {
+            title: "Dashbaord",
+            path: "/dashboard"
+        },
 
     ]
     if (pathName.includes("dashboard"))
-
-        return(
+        return (
             <div className="bg-green-400 p-4">
                 dashboard navbar layout
             </div>
         )
 
-        return (
-            <div className="bg-red-400  container text-white mx-auto ">
-                <ul className="flex gap-x-5 justify-between ">
-                    {
-                        links.map(item => {
-                            return <li key={item?.path}><Link className={`${item?.path === pathName && "bg-rose-500"}`} href={item?.path}>{item?.title}</Link></li>
-                        })
-                    }
-                    <button onClick={handelLogin}>Login</button>
+    return (
+        <div className="bg-red-400  container text-white mx-auto ">
+            <ul className="flex gap-x-5 justify-between ">
+                {
+                    links.map(item => {
+                        return <li key={item?.path}><Link className={`${item?.path === pathName && "bg-rose-500"}`} href={item?.path}>{item?.title}</Link></li>
+                    })
+                }
+                <button onClick={handelLogin}>Login</button>
 
-                </ul>
-            </div>
-        );
+            </ul>
+        </div>
+    );
 }
 
 export default Navbar;

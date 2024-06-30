@@ -11,3 +11,4 @@ function CategoriesDetailspage({ params }) {
 }
 
 export default CategoriesDetailspage;
+
