@@ -1,54 +1,28 @@
-"use client"
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
 
 function Navbar() {
-    const pathName = usePathname();
-    const router = useRouter()
-    function handelLogin() {
-        router.push("/login")
-    }
-    const links = [
+    const dataNav = [
+        {
+            title: "Home",
+            path: "/home"
+        },
         {
             title: "About",
             path: "/about"
         },
         {
-            title: "Services",
-            path: "/services"
+            title: "Contact",
+            path: "/contact"
         },
-        {
-            title: "Blog",
-            path: "/blog"
-        },
-        {
-            title: "Categories",
-            path: "/categories"
-        },
-        {
-            title: "Dashbaord",
-            path: "/dashboard"
-        },
-
-    ]
-    if (pathName.includes("dashboard"))
-        return (
-            <div className="bg-green-400 p-4">
-                dashboard navbar layout
-            </div>
-        )
+    ];
 
     return (
-        <div className="bg-red-400  container text-white mx-auto ">
-            <ul className="flex gap-x-5 justify-between ">
-                {
-                    links.map(item => {
-                        return <li key={item?.path}><Link className={`${item?.path === pathName && "bg-rose-500"}`} href={item?.path}>{item?.title}</Link></li>
-                    })
-                }
-                <button onClick={handelLogin}>Login</button>
-
-            </ul>
+        <div className="flex justify-between">
+            {dataNav.map((val, index) => (
+                <Link key={index} href={val.path} className="bg-emerald-500">
+                    <span className="bg-red-500 text-white p-2 rounded">{val.title}</span>
+                </Link>
+            ))}
         </div>
     );
 }
