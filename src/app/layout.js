@@ -15,10 +15,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <nav className="w-10/12 mx-auto">
+        <nav className="w-10/12 mx-auto bg-gray-600 p-3 rounded-lg text-white">
           <Navbar></Navbar>
         </nav>
-        <div className="min-h-[calc(100vh-100px)]">
+        <div className="min-h-[calc(100vh-100px)] my-8">
         {children}
         </div>
         <Footer></Footer>

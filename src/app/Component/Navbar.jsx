@@ -18,6 +18,10 @@ function Navbar() {
             title: "Contact",
             path: "/contact"
         },
+        {
+            title: "Blog",
+            path: "/blog"
+        },
     ];
 
     function handleLogin() {
@@ -26,7 +30,7 @@ function Navbar() {
     }
 
     return (
-        <div className="flex justify-between mt-3">
+        <div className="flex justify-between mt-3 ">
             <div>
                 {dataNav.map((val, index) => (
                     <Link 
