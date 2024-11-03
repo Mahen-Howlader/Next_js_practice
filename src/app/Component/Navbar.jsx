@@ -29,6 +29,14 @@ function Navbar() {
         router.push("/login")
     }
 
+
+    if(pathName.includes("dashboard")){
+        return <div>
+            Navbar Admin Dashboard
+        </div>
+    }
+
+
     return (
         <div className="flex justify-between mt-3 ">
             <div>
