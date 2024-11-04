@@ -1,6 +1,4 @@
 function page({params}) {
-    console.log({params})
-    console.log(params?.fetures?.length)
     if(params?.fetures?.length == 3){
         return <div>{params?.fetures[2]}</div>
     }
