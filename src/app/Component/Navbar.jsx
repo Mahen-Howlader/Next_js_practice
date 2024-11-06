@@ -22,6 +22,14 @@ function Navbar() {
             title: "Blog",
             path: "/blog"
         },
+        {
+            title: "Dashboard",
+            path: "/dashboard"
+        },
+        {
+            title: "Posts",
+            path: "/posts"
+        },
     ];
 
     function handleLogin() {
